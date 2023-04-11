@@ -44,7 +44,8 @@ TODO
 
 A new Leaf can be created only if there is no already existing Leaf in the desired Branch, which can perform the same
 functionality with the same output as the newly created Leaf - aka no Leaf duplication is allowed. A Leaf should be
-attached to Branch, only 1 at a time. Creating a Leaf should not affect any of the already existing Leaves or the Branch
+attached to a Branch, only 1 at a time. Creating a Leaf should not affect any of the already existing Leaves or the
+Branch
 itself, as it should be a completely independent unit, following all SOLID standards.
 
 ### Cutting a Component Stem
@@ -70,12 +71,13 @@ created (see [Replacing a dry Leaf](#replacing-a-leaf)).
 ### Replacing a Leaf
 
 When a Leaf with some usages needs to be dried, it must have a replacement Leaf which will handle the part of its
-functionality that is used in other places, or it as a whole. 
+functionality that is used in other places, or it as a whole.
 
 #### Here are the essential steps to follow to successfully replace a Leaf:
+
 1. Create a new Leaf and connect it to the desired Branch (see [Creating a new Leaf](#creating-a-new-leaf))
 2. Transfer the functionality of the Leaf subject to drying into the new Leaf.
-3. Replace the objects, method calls, and any other usage of the old Leaf with those in the new one. 
+3. Replace the objects, method calls, and any other usage of the old Leaf with those in the new one.
 4. Dry the old Leaf, making sure the process is done properly, as described in [Drying a Leaf](#drying-a-leaf).
 
 ## "CANNOT DO" Restrictions
@@ -87,7 +89,7 @@ functionality that is used in other places, or it as a whole.
 * A method cannot be changed to start using a field, object or call a method, if it is called X+ times OR has a
   dependency tree of Y+ nodes.
 * The return type of a method cannot be changed, if the returned object is used at least 1 times.
-* The access modifier of a method cannot be changed, if it is called X+ times OR has a dependency tree of Y+.
+* The access modifier of a method cannot be changed, if it is called X+ times OR has a dependency tree of Y+ nodes.
 * Recommended: The complexity of a method cannot be increased, if it is called X+ times OR has a dependency tree of Y+
   nodes. (This may be a good restriction for big projects, where even a small increase in the compilation and/or
   execution time may be crucial).
@@ -100,12 +102,12 @@ functionality that is used in other places, or it as a whole.
 * A class cannot extend a new class, if its constructor or other methods are called X*+ times OR have a
   dependency tree of Y*+ nodes.
 
-* A method in a class cannot be overrided, if the original method is at least 1 times.
+* A method in a class cannot be overrided, if the original method is called at least 1 times.
 
 *X and Y should be set according to the project's size and specifications. In general, it is recommended to have X = Y <
 = 3.
 
 **dependency tree is a tree that represents the area of affection of a method, aka how many other
-methods/classes/fields, etc. call it, and how deep does its result go to other components of the project. e.g. if the '
-f()' method returns a K value that is later used in 'fun()' method and the 'fun()' method is later called in 'A' class,
+methods/classes/fields, etc. call it, and how deep does its result go to other components of the project. e.g. if the
+'f()' method returns a K value that is later used in 'fun()' method and the 'fun()' method is later called in 'A' class,
 then this method has a dependency tree of Y=2 nodes, which means that the value K has been used in 2 other places.
