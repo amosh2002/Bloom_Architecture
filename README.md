@@ -4,15 +4,15 @@
 
 ### Main Stem
 
-lorem...
+TODO
 
 ### Component Stems
 
-lorem...
+TODO
 
 ### Branches
 
-lorem...
+TODO
 
 ### Leaves
 
@@ -30,15 +30,15 @@ which will handle all information transportation between Branches.
 
 ### Creating the Main Stem
 
-lorem...
+TODO
 
 ### Creating a Component Stem
 
-lorem...
+TODO
 
 ### Creating a new Branch
 
-lorem...
+TODO
 
 ### Creating a new Leaf
 
@@ -49,19 +49,18 @@ itself, as it should be a completely independent unit, following all SOLID stand
 
 ### Cutting a Component Stem
 
-lorem...
+TODO
 
 ### Cutting a Branch
 
-lorem...
+TODO
 
 ### Drying a Leaf
 
 Drying a Leaf means removing it from the project completely, via deleting it from its Branch repository. A Leaf can be
 dried only once, after which it should no longer be accessible by any other Leaf in its Branch and in its Branch
 Handler. If the Leaf has a usage as defined [below](#a-leaf-can-be-dried-only-if), a replacement Leaf should be
-created (
-see [Replacing a dry Leaf](#replacing-a-leaf)).
+created (see [Replacing a dry Leaf](#replacing-a-leaf)).
 
 #### A Leaf can be dried only if:
 
