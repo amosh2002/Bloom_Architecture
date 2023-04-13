@@ -14,8 +14,3 @@ public class MainStem {
         editorStem.registerObserver(shareStem);
     }
 }
-
-/*
-1. define dependency,look up vulnerable cases
-2. leaf choracum
- */
