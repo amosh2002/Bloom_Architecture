@@ -4,11 +4,42 @@
 
 ### Main Stem
 
-TODO
+The Main Stem is the core component of the project, which handles all communication between Component Stems. Here are
+some of
+its general properties:
+
+* There can be only one Main Stem.
+* (Only) It should handle All types of communication between Component Stems.
+* All kinds of inter-Component Stem communications through the Main Stem should be handled following the principle,
+  where no
+  Component Stem knows about the existence of other Component Stems.
+* It is the only component of the project to have access to the Root.
+* It should contain Leaves with some pre-defined methodologies? which handle the inter-Component Stem
+  communications.
+
+Example: A good example of a communication handling principle is the Observer design pattern. If such design pattern is
+chosen
+as a
+communication handling mechanism between Component Stems and Branches, then all the interfaces needed for the Observer
+and Subject
+declaration
+should be located in Main Stem. In this case, there should also be some place (e.g. class), where all the observers and
+subjects are being connected to each other: for example, there may be a MainStem class, where all Component
+Stem objects are declared, and corresponding observers are registered.
 
 ### Component Stems
 
-TODO
+Component Stems represent separate components of the application. They should be fully independent units, with a one and
+only connection to the Main Stem. Here are some of their general properties:
+
+* They do not have access to the Root.
+* They should be connected to the Main Stem via a principle, where the output of that Component Stem is
+  encapsulated, so that the Main Stem does not know about any of the operations, data types and any other inner
+  information of that Component Stem.
+* They can have other smaller Branches connected to them.
+* They can have Leaves connected to them.
+* A Component Stem can be cut, placed separately as a new Plant, and it should be fully functional if the necessary
+  input is given.
 
 ### Branches
 
@@ -25,6 +56,10 @@ another Branch except its own. A Leaf can be extended, implemented or used in ot
 Any information that needs to be accessed from an external Branch, should be passed to the corresponding Handler in the
 Leaf's Branch,
 which will handle all information transportation between Branches.
+
+### Root
+
+TODO
 
 ## Rules
 
