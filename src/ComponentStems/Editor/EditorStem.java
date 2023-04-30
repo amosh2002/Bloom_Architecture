@@ -1,8 +1,8 @@
-package Components.Editor;
+package ComponentStems.Editor;
 
-import MainSTEM.Interfaces.IObserver;
-import MainSTEM.Interfaces.ISubject;
-import MainSTEM.Data.Photo;
+import MainStem.Interfaces.IObserver;
+import MainStem.Interfaces.ISubject;
+import MainStem.Data.Photo;
 
 import java.util.ArrayList;
 import java.util.List;

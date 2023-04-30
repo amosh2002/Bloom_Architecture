@@ -1,7 +1,7 @@
-package Components.Share;
+package ComponentStems.Share;
 
-import MainSTEM.Interfaces.IObserver;
-import MainSTEM.Data.Photo;
+import MainStem.Interfaces.IObserver;
+import MainStem.Data.Photo;
 
 public class ShareStem implements IObserver {
     @Override

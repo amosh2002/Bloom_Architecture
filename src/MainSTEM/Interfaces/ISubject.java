@@ -1,4 +1,4 @@
-package MainSTEM.Interfaces;
+package MainStem.Interfaces;
 
 public interface ISubject {
     void registerObserver(IObserver observer);

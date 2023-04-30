@@ -1,16 +1,17 @@
-package MainSTEM;
+package MainStem;
 
-import Components.Editor.EditorStem;
-import Components.Growth.GrowthStem;
-import Components.Share.ShareStem;
+import ComponentStems.Editor.EditorStem;
+import ComponentStems.PhotoTaker.Handler.PhotoTakerHandler;
+import ComponentStems.PhotoTaker.PhotoTaker;
+import ComponentStems.Share.ShareStem;
 
 public class MainStem {
     public static void main(String[] args) {
-        GrowthStem growthStem = new GrowthStem();
+        PhotoTakerHandler photoTakerHandler = new PhotoTakerHandler();
         EditorStem editorStem = new EditorStem();
         ShareStem shareStem = new ShareStem();
 
-        growthStem.registerObserver(editorStem);
+        photoTakerHandler.registerObserver(editorStem);
         editorStem.registerObserver(shareStem);
     }
 }

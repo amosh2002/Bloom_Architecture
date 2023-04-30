@@ -1,4 +1,4 @@
-package MainSTEM.Data;
+package MainStem.Data;
 
 public class Photo {
     private final String imageName;

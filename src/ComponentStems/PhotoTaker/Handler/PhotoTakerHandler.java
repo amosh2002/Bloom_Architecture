@@ -1,23 +1,20 @@
-package Components.Growth;
+package ComponentStems.PhotoTaker.Handler;
 
-import MainSTEM.Interfaces.IObserver;
-import MainSTEM.Interfaces.ISubject;
-import MainSTEM.Data.Photo;
+import ComponentStems.PhotoTaker.Data;
+import ComponentStems.PhotoTaker.PhotoTaker;
+import MainStem.Interfaces.IObserver;
+import MainStem.Interfaces.ISubject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GrowthStem implements ISubject {
+public class PhotoTakerHandler implements ISubject {
     private final List<IObserver> observers = new ArrayList<>();
-    private Photo photo;
-
-    public void takePhoto() {
-        this.photo = new Photo("initial_photo");
-        notifyObservers();
-    }
+    private Data data;
 
     @Override
     public void registerObserver(IObserver observer) {
+        data = new PhotoTaker().takePhoto();
         observers.add(observer);
     }
 
@@ -29,7 +26,7 @@ public class GrowthStem implements ISubject {
     @Override
     public void notifyObservers() {
         for (IObserver observer : observers) {
-            observer.update(photo);
+            observer.update(data.getPhoto());
         }
     }
 }
