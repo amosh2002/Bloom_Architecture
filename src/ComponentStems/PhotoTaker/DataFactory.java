@@ -1,4 +1,4 @@
-package ComponentStems.PhotoTaker.Data;
+package ComponentStems.PhotoTaker;
 
 import MainStem.Data.Photo;
 

@@ -1,6 +1,6 @@
 package ComponentStems.PhotoTaker.Handler;
 
-import ComponentStems.PhotoTaker.Data.Data;
+import ComponentStems.PhotoTaker.Data;
 import ComponentStems.PhotoTaker.PhotoTaker;
 import MainStem.Interfaces.IObserver;
 import MainStem.Interfaces.ISubject;
