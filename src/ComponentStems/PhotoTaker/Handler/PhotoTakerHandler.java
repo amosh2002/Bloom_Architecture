@@ -14,7 +14,6 @@ public class PhotoTakerHandler implements ISubject {
 
     @Override
     public void registerObserver(IObserver observer) {
-        data = new PhotoTaker().takePhoto();
         observers.add(observer);
     }
 
@@ -28,5 +27,10 @@ public class PhotoTakerHandler implements ISubject {
         for (IObserver observer : observers) {
             observer.update(data.getPhoto());
         }
+    }
+
+    public void startApp() {
+        data = new PhotoTaker().takePhoto();
+        notifyObservers();
     }
 }

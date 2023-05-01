@@ -2,7 +2,6 @@ package MainStem;
 
 import ComponentStems.Editor.EditorStem;
 import ComponentStems.PhotoTaker.Handler.PhotoTakerHandler;
-import ComponentStems.PhotoTaker.PhotoTaker;
 import ComponentStems.Share.ShareStem;
 
 public class MainStem {
@@ -13,5 +12,7 @@ public class MainStem {
 
         photoTakerHandler.registerObserver(editorStem);
         editorStem.registerObserver(shareStem);
+
+        photoTakerHandler.startApp();
     }
 }
