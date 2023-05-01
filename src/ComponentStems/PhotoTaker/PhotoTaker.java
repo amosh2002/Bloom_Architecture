@@ -1,5 +1,7 @@
 package ComponentStems.PhotoTaker;
 
+import ComponentStems.PhotoTaker.Data.Data;
+import ComponentStems.PhotoTaker.Data.DataFactory;
 import MainStem.Data.Photo;
 
 public class PhotoTaker {
